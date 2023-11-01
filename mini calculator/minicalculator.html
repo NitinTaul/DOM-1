@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mini Calculator</title>
+</head>
+<body>
+  <h1>Mini Calculator</h1>
+  <label for="num1">Enter the first number: </label>
+  <input type="number" id="num1"><br><br>
+
+  <label for="num2">Enter the second number: </label>
+  <input type="number" id="num2"><br><br>
+
+  <button onclick="add()">Add</button>
+  <button onclick="subtract()">Subtract</button>
+  <button onclick="divide()">Divide</button>
+  <button onclick="multiply()">Multiply</button>
+</body>
+</html>
+<script>
+  function add() {
+     num1 = Number(document.getElementById("num1").value);
+     num2 = Number(document.getElementById("num2").value);
+     result = num1 + num2;
+    alert("Result: " + result);
+  }
+
+  function subtract() {
+     num1 = Number(document.getElementById("num1").value);
+     num2 = Number(document.getElementById("num2").value);
+     result = num1 - num2;
+    alert("Result: " + result);
+  }
+
+  function divide() {
+     num1 = Number(document.getElementById("num1").value);
+     num2 = Number(document.getElementById("num2").value);
+    if (num2 === 0) {
+      alert("Error: Division by zero is not allowed");
+    } else {
+       result = num1 / num2;
+      alert("Result: " + result);
+    }
+  }
+
+  function multiply() {
+     num1 = Number(document.getElementById("num1").value);
+     num2 = Number(document.getElementById("num2").value);
+     result = num1 * num2;
+    alert("Result: " + result);
+  }
+</script>
+</html>
